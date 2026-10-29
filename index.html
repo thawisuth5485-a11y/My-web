@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CV และ Portfolio ของ Thawisuth Prangsrisroon">
+  <title>Thawisuth Prangsrisroon | CV</title>
+  <style>
+    :root {
+      --navy: #204c63;
+      --blue: #6e89a6;
+      --ink: #183d51;
+      --gold: #f1c87c;
+      --paper: #fffdf8;
+      --muted: #637888;
+      --line: #d8e1e5;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; color: var(--ink);
+      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+      background: #e9eff1; line-height: 1.6;
+    }
+    a { color: inherit; }
+    .page {
+      width: min(1100px, calc(100% - 32px));
+      margin: 28px auto; background: var(--paper);
+      border: 1px solid #dce5e8; box-shadow: 0 18px 55px #163d5118;
+      overflow: hidden; border-radius: 18px;
+    }
+    .hero {
+      position: relative; padding: 34px 42px 30px 250px;
+      min-height: 210px; color: white;
+      background: linear-gradient(120deg, var(--navy), #477086);
+      overflow: hidden;
+    }
+    .hero::after {
+      content: ""; position: absolute; width: 360px; height: 360px;
+      border: 30px solid #ffffff12; border-radius: 50%;
+      right: -100px; top: -205px;
+    }
+    .portrait {
+      position: absolute; z-index: 1; left: 42px; top: 24px;
+      width: 165px; height: 165px; border-radius: 50%;
+      object-fit: cover; object-position: center;
+      border: 7px solid #d9e5e9; box-shadow: 0 0 0 5px #ffffff25;
+      background: #dbe5e9;
+    }
+    .eyebrow { text-transform: uppercase; letter-spacing: .16em; font-size: .76rem; opacity: .8; }
+    h1 { font-size: clamp(1.8rem, 4vw, 2.65rem); line-height: 1.15; margin: 7px 0 5px; }
+    .latin-name { font-size: 1.04rem; opacity: .9; margin: 0 0 14px; }
+    .role {
+      display: inline-block; background: var(--gold); color: #23475a;
+      font-weight: 800; border-radius: 30px; padding: 6px 14px;
+      font-size: .9rem;
+    }
+    .content { display: grid; grid-template-columns: 285px 1fr; }
+    aside {
+      background: #f1f5f5; padding: 26px 22px 32px;
+      border-right: 1px solid var(--line);
+    }
+    main { padding: 30px 34px 38px; min-width: 0; }
+    .section { margin-bottom: 28px; }
+    .section:last-child { margin-bottom: 0; }
+    h2 {
+      font-size: 1.05rem; margin: 0 0 15px; color: white;
+      background: var(--navy); padding: 8px 13px;
+      border-radius: 5px; letter-spacing: .02em;
+    }
+    aside h2 { background: var(--blue); }
+    h3 { margin: 0 0 3px; font-size: 1rem; }
+    .meta { font-size: .86rem; color: var(--muted); font-weight: 650; }
+    p { margin: 7px 0 0; }
+    .intro-card {
+      border: 1px solid #e2c37f; background: #fff5df;
+      border-radius: 14px; padding: 15px; margin-bottom: 24px;
+    }
+    .intro-card h3 { color: var(--navy); }
+    .intro-card p { font-size: .92rem; }
+    .contact-list, .detail-list { list-style: none; padding: 0; margin: 0; }
+    .contact-list li, .detail-list li { margin: 10px 0; overflow-wrap: anywhere; }
+    .contact-list li { display: flex; gap: 9px; align-items: flex-start; font-size: .9rem; }
+    .contact-icon {
+      display: inline-grid; place-items: center; flex: 0 0 25px;
+      width: 25px; height: 25px; border-radius: 50%;
+      color: white; background: var(--blue); font-size: .75rem; font-weight: 800;
+    }
+    .detail-list { padding-left: 18px; list-style: disc; font-size: .9rem; }
+    .detail-list li { margin: 5px 0; }
+    .timeline { position: relative; padding-left: 20px; }
+    .timeline::before {
+      content: ""; position: absolute; left: 4px; top: 5px; bottom: 5px;
+      width: 2px; background: #d9e3e7;
+    }
+    .entry { position: relative; margin: 0 0 21px; }
+    .entry:last-child { margin-bottom: 0; }
+    .entry::before {
+      content: ""; position: absolute; left: -21px; top: 7px;
+      width: 10px; height: 10px; border-radius: 50%;
+      background: var(--gold); border: 2px solid var(--navy);
+    }
+    .entry p { font-size: .93rem; }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .skill-tags span {
+      background: #eaf0f2; border: 1px solid #d7e2e6;
+      border-radius: 999px; padding: 6px 11px; font-size: .85rem;
+    }
+    .note { font-size: .82rem; color: var(--muted); margin-top: 10px; }
+    footer {
+      background: var(--navy); color: #eaf2f5; text-align: center;
+      padding: 15px 20px; font-size: .82rem;
+    }
+    @media (max-width: 720px) {
+      .page { width: min(100% - 18px, 560px); margin: 9px auto; border-radius: 12px; }
+      .hero { padding: 205px 23px 27px; text-align: center; }
+      .portrait { left: 50%; transform: translateX(-50%); top: 22px; width: 145px; height: 145px; }
+      .content { grid-template-columns: 1fr; }
+      aside { border-right: 0; border-bottom: 1px solid var(--line); padding: 24px; }
+      main { padding: 24px; }
+    }
+    @media print {
+      body { background: white; }
+      .page { width: 100%; margin: 0; border: 0; box-shadow: none; border-radius: 0; }
+      .hero { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      h2, footer, .role, .contact-icon { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      a { text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <img class="portrait" src="data:image/jpeg;base64,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" alt="รูปโปรไฟล์">
+      <div class="eyebrow">Curriculum Vitae · Portfolio</div>
+      <h1>ธวิศุทธิ์ ปรางค์ศรีอรุณ</h1>
+      <p class="latin-name">Thawisuth Prangsrisroon</p>
+      <span class="role">Web Developer / Coding / UX UI</span>
+    </header>
+
+    <div class="content">
+      <aside>
+        <section class="intro-card">
+          <h3>เกี่ยวกับฉัน</h3>
+          <p>ผมเป็นนักศึกษาที่ชอบสร้างสิ่งใหม่ ๆ ด้วยโค้ดและงานออกแบบ ชอบเรียนรู้เทคโนโลยีอยู่เสมอ และอยากนำความรู้ไปสร้างสิ่งที่เป็นประโยชน์กับผู้อื่น</p>
+        </section>
+
+        <section class="section">
+          <h2>ข้อมูลส่วนตัว</h2>
+          <ul class="detail-list">
+            <li><strong>ชื่อ–สกุล:</strong> ธวิศุทธิ์ ปรางค์ศรีอรุณ</li>
+            <li><strong>ชื่อเล่น:</strong> ธวิศุทธิ์</li>
+            <li><strong>อายุ:</strong> 17 ปี <span class="note"></span></li>
+            <li><strong>วันเกิด:</strong> 30 พฤษภาคม 2009 <span class="note"></span></li>
+            <li><strong>สัญชาติ:</strong> ไทย</li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <h2>ช่องทางการติดต่อ</h2>
+          <ul class="contact-list">
+            <li><span class="contact-icon">☎</span><span>098-453-5485</span></li>
+            <li><span class="contact-icon">✉</span><span>68219010040@kbtc.ac.th</span></li>
+            <li><span class="contact-icon">⌂</span><span>123 Anywhere St., Any City, ST 12345</span></li>
+          </ul>
+        </section>
+      </aside>
+
+      <main>
+        <section class="section">
+          <h2>ประวัติการศึกษา</h2>
+          <div class="timeline">
+            <article class="entry">
+              <h3>Krabi Technical College</h3>
+              <div class="meta">2025 – 2026</div>
+              <p>อาชีวศึกษา เกรดเฉลี่ยสะสม 3.20</p>
+            </article>
+            <article class="entry">
+              <h3>Ammartpanichnukul School</h3>
+              <div class="meta">2022 – 2025</div>
+              <p>มัธยมศึกษา เกรดเฉลี่ยสะสม 2.80 </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>ประวัติการทำงาน</h2>
+          <div class="timeline">
+            <article class="entry">
+              <h3>Hard Skills</h3>
+              <p>HTML5, CSS3, JavaScript, Responsive Web Design, Bootstrap / Tailwind, Git/GitHub</p>
+            </article>
+            <article class="entry">
+              <h3>Design Skills</h3>
+              <p>Figma, UI/UX Design, Web Layout</p>
+            </article>
+            <article class="entry">
+              <h3>Soft Skills</h3>
+              <p>Problem Solving, Teamwork, Continuous Learning</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>ทักษะความสามารถ</h2>
+          <div class="skill-tags">
+            <span>HTML5</span><span>CSS</span>
+            <span>JavaScript</span><span>Responsive Design</span>
+            <span>UI/UX Design</span><span>Git / GitHub</span>
+          </div>
+        </section>
+      </main>
+    </div>
+    <footer>Thawisuth Prangsrisroon · CV / Portfolio</footer>
+  </div>
+</body>
+</html>
